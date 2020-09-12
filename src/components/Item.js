@@ -11,16 +11,14 @@ export class Item extends React.Component {
       'line-through' : 'none'  
     }
   }
-  markComplete =(e) => {
-      console.log(this.props)
-  }
 
   render() {
+    const {id,title } = this.props.item;  
     return (
       <div style={this.getStyle()}> 
         <p>
-          <input type="checkbox" onChange={this.markComplete}/> {' '} 
-          {this.props.item.title}
+          <input type="checkbox" onChange={this.props.markComplete.bind(this, id)}/> {' '} 
+          {title}
         </p>
       </div>  
 

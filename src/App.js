@@ -23,10 +23,19 @@ class App extends React.Component {
       }, 
     ]
   }
+
+  markComplete = (id) => {
+    this.setState({ list: this.state.list.map(item => {
+      if(item.id === id) {
+        item.completed = !item.completed
+      }
+      return item;
+    }) }); 
+  }
   render() {
     return (
       <div className="App">
-        <ShoppingList list={this.state.list} />
+        <ShoppingList list={this.state.list} markComplete={this.markComplete} />
       </div>
    )
   }  

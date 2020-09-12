@@ -19,6 +19,7 @@ export class Item extends React.Component {
         <p>
           <input type="checkbox" onChange={this.props.markComplete.bind(this, id)}/> {' '} 
           {title}
+          <button onClick={this.props.delItem.bind(this, id)} style={btnStyle}>x</button>
         </p>
       </div>  
 
@@ -28,5 +29,15 @@ export class Item extends React.Component {
 
 Item.propTypes = {
     item: PropTypes.object.isRequired
+}
+
+const btnStyle = {
+  background: 'red',
+  color: 'white',
+  border: 'none',
+  padding: '5px 9px',
+  borderRadius: '50%',
+  cursor: 'pointer',
+  float: 'right'
 }
 export default Item;

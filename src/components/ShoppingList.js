@@ -6,7 +6,8 @@ class ShoppingList extends React.Component{
 
   render() {
     return this.props.list.map((item) => (
-      <Item key={item.id} item={item} markComplete={this.props.markComplete} />
+      <Item key={item.id} item={item} markComplete=
+      {this.props.markComplete} delItem={this.props.delItem} />
      ));
   }  
 }

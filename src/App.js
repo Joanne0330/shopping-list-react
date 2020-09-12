@@ -1,5 +1,7 @@
 import React from 'react';
+import Header from './components/layout/Header';
 import ShoppingList from './components/ShoppingList';
+import AddItem from './components/AddItem';
 
 import './App.css';
 
@@ -32,10 +34,20 @@ class App extends React.Component {
       return item;
     }) }); 
   }
+
+  delItem = (id) => {
+    this.setState({ list: [...this.state.list.filter(item => item.id !== id)] });
+  }
+
   render() {
     return (
       <div className="App">
-        <ShoppingList list={this.state.list} markComplete={this.markComplete} />
+        <div className="container">
+          <Header />
+          <AddItem />
+          <ShoppingList list={this.state.list} markComplete={this.markComplete}
+          delItem={this.delItem} />
+        </div>
       </div>
    )
   }  

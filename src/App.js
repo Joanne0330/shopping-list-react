@@ -12,7 +12,7 @@ class App extends React.Component {
       {
         id: uuidv4(),
         title: 'milk',
-        completed: true
+        completed: false
       }, 
       {
         id: uuidv4(),

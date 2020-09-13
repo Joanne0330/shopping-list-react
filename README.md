@@ -1,3 +1,23 @@
+# Shopping List
+
+This is a simple front-end only application written in React. The set up was done via Create React App.
+
+**To run the app, after cloning, run in terminal:**
+
+```
+npm start
+```
+
+**User then can use this one page app to:**
+
+- add items to the list
+- delete items from the list
+- mark off item by clicking a bottom next to the item, so that a line will run through its text
+
+This app currently does not have any testing. UUID is installed and used for item id. This app is created to practice using the React framework by following the tutorial from Traversy Media.
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

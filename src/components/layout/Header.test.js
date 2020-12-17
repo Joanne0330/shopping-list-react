@@ -1,12 +1,12 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import Header from './Header';
 
-jest.mock('./__mocks__/Header')
+
 
 
 test('renders the header', () => {
-  render(<App />)
+  render(<Header />)
   const header = screen.getByText(/My Shopping List/i);
   expect(header).toBeInTheDocument();
 });

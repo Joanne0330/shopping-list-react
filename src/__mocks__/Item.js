@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export class Item extends React.Component {
+export class mockItem extends React.Component {
   getStyle() {
     return {
       backgroundColor: '#f4f4f4',
@@ -17,11 +17,9 @@ export class Item extends React.Component {
     return (
       <div style={this.getStyle()}> 
         <p>
-          {/* <input type="checkbox" onChange={this.props.markComplete.bind(this, id)}/> {' '}  */}
-          <input type="checkbox" onChange={() => this.props.markComplete(id)}/> {' '} 
-          
+          <input type="checkbox" onChange={this.props.markComplete.bind(this, id)}/> {' '} 
           {title}
-          <button onClick={() => this.props.delItem(id)} style={btnStyle}>x</button>
+          <button onClick={this.props.delItem.bind(this, id)} style={btnStyle}>x</button>
         </p>
       </div>  
 
@@ -42,4 +40,4 @@ const btnStyle = {
   cursor: 'pointer',
   float: 'right'
 }
-export default Item;
+export default mockItem;

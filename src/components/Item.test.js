@@ -11,5 +11,19 @@ test('it has a single item and a checkbox', () => {
         completed: false
     }}/>)
     const title = screen.getByText(/milk/i)
+    const checkbox = screen.getByRole('checkbox')
     expect(title).toBeInTheDocument();
+    expect(checkbox).toBeInTheDocument();
+})
+
+test('it has a fake item and a checkbox', () => {
+    render(<Item item={{
+        id: uuidv4(),
+        title: 'apple',
+        completed: false
+    }}/>)
+    const title = screen.getByText(/apple/i)
+    const checkbox = screen.getByRole('checkbox')
+    expect(title).toBeInTheDocument();
+    expect(checkbox).toBeInTheDocument();
 })

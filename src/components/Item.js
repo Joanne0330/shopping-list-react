@@ -17,11 +17,9 @@ export class Item extends React.Component {
     return (
       <div style={this.getStyle()}> 
         <p>
-          {/* <input type="checkbox" onChange={this.props.markComplete.bind(this, id)}/> {' '}  */}
           <input type="checkbox" onChange={() => this.props.markComplete(id)}/> {' '} 
-          
           {title}
-          <button onClick={() => this.props.delItem(id)} style={btnStyle}>x</button>
+          <button data-testid="delete" onClick={() => this.props.delItem(id)} style={btnStyle}>x</button>
         </p>
       </div>  
 

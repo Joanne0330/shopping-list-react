@@ -9,21 +9,11 @@ import './App.css';
 class App extends React.Component {
   state = {
     list: [
-      {
-        id: uuidv4(),
-        title: 'milk',
-        completed: false
-      }, 
-      {
-        id: uuidv4(),
-        title: 'eggs',
-        completed: false
-      }, 
-      {
-        id: uuidv4(),
-        title: 'bananas',
-        completed: false
-      }, 
+      // {
+      //   id: uuidv4(),
+      //   title: 'milk',
+      //   completed: false
+      // }
     ]
   }
 

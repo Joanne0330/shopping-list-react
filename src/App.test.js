@@ -22,7 +22,7 @@ test('it can add an item to the list', () => {
   expect(item).toBeInTheDocument();
 })
 
-xtest('user can check off a list', () => {  //multiple checkboxes: unable to test
+test('user can check off a list', () => {
   render(<App />)
   const textBox = screen.getByPlaceholderText("Add Item ...")
   userEvent.type(textBox, "oranges")
@@ -33,7 +33,7 @@ xtest('user can check off a list', () => {  //multiple checkboxes: unable to tes
   expect(checkbox).toBeChecked();
 })
 
-xtest('user can delete an item', () => {  //multiple delete buttons therefore cannot test
+test('user can delete an item', () => {
   render(<App />)
   const textBox = screen.getByPlaceholderText("Add Item ...")
   userEvent.type(textBox, "coffee")
